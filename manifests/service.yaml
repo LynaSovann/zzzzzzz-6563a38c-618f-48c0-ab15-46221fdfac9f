@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: zzzzzzz-6563a38c-618f-48c0-ab15-46221fdfac9f-service
+spec:
+  type: NodePort
+  selector:
+    app: zzzzzzz-6563a38c-618f-48c0-ab15-46221fdfac9f
+  ports:
+    - protocol: TCP
+      port: 8128
+      targetPort: 8080
