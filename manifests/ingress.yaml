@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: zzzzzzz-6563a38c-618f-48c0-ab15-46221fdfac9f-https-ingress
+  namespace: zzzzzzz-6563a38c-618f-48c0-ab15-46221fdfac9f
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - lyna-zzzzzzz.tinhlgkiddy.fun
+      secretName: zzzzzzz-6563a38c-618f-48c0-ab15-46221fdfac9f-secret-tls
+  rules:
+    - host: lyna-zzzzzzz.tinhlgkiddy.fun
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: zzzzzzz-6563a38c-618f-48c0-ab15-46221fdfac9f-service 
+                port:
+                  number: 8128
