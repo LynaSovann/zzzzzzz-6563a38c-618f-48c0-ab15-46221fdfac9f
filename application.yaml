@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: zzzzzzz-6563a38c-618f-48c0-ab15-46221fdfac9f
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/LynaSovann/zzzzzzz-6563a38c-618f-48c0-ab15-46221fdfac9f.git
+    targetRevision: main
+    path: manifests
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: zzzzzzz-6563a38c-618f-48c0-ab15-46221fdfac9f
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  revisionHistoryLimit: 5
