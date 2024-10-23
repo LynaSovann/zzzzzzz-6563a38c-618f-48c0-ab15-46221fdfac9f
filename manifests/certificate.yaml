@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: zzzzzzz-6563a38c-618f-48c0-ab15-46221fdfac9f-certificate
+  namespace: zzzzzzz-6563a38c-618f-48c0-ab15-46221fdfac9f
+spec:
+  secretName: zzzzzzz-6563a38c-618f-48c0-ab15-46221fdfac9f-secret-tls
+  commonName: lyna-zzzzzzz.tinhlgkiddy.fun
+  dnsNames:
+  - lyna-zzzzzzz.tinhlgkiddy.fun
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
